@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { BrowserRouter } from 'react-router-dom'
 
@@ -31,6 +31,10 @@ const App = (): JSX.Element => {
 
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+
+  useEffect(() => { 
+    setDarkMode(true);
+  },[])
 
 
   return (

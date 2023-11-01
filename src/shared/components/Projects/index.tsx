@@ -18,32 +18,32 @@ const Projects = (props: any) => {
                     I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.
                 </Desc>
                 <ToggleButtonGroup >
-                    {toggle === 'all' ?
+                    {toggle === "all" ?
                         <ToggleButton active onClick={() => setToggle('all')}>All</ToggleButton>
                         :
                         <ToggleButton active={false} onClick={() => setToggle('all')}>All</ToggleButton>
                     }
                     <Divider />
-                    {toggle === 'web app' ?
+                    {toggle === "web app" ?
                         <ToggleButton active={true} onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
                         :
                         <ToggleButton active={false} onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
                     }
                     <Divider />
-                    {toggle === 'android app' ?
+                    {toggle === "android app" ?
                         <ToggleButton active={true} onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
                         :
                         <ToggleButton active={false} onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
                     }
                     <Divider />
-                    {toggle === 'machine learning' ?
+                    {toggle === "machine learning" ?
                         <ToggleButton active={true} onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
                         :
                         <ToggleButton active={false} onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
                     }
                 </ToggleButtonGroup>
                 <CardContainer>
-                    {toggle === 'all' && projects
+                    {toggle === "all" && projects
                         .map((project) => (
                             <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal} />
                         ))}
